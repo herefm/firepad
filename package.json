@@ -31,7 +31,7 @@
     "realtime",
     "collaborative"
   ],
-  "main": "dist/firepad.min.js",
+  "main": "dist/firepad.js",
   "files": [
     "dist/**",
     "LICENSE",
