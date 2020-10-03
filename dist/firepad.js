@@ -6110,11 +6110,15 @@ firepad.Firepad = (function(global) {
 
     // Show the toolbar only when text is selected
     this.client_.onTextSelected = (coords) => {
-      this.toolbar.show(coords);
+      if (this.toolbar) {
+        this.toolbar.show(coords);
+      }
     }
 
     this.client_.onTextDeselected = () => {
-      this.toolbar.hide();
+      if (this.toolbar) {
+        this.toolbar.hide();
+      }
     }
 
 
