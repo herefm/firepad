@@ -1818,6 +1818,7 @@ firepad.RichTextToolbar = (function(global) {
   RichTextToolbar.prototype.makeColorDropdown_ = function() {
     var colors = [
       'rgb(245,245,245)',
+      'rgb(0,0,0)',
       'rgb(96,72,252)',
       'rgb(89,134,188)',
       'rgb(126,195,187)',
@@ -6109,15 +6110,11 @@ firepad.Firepad = (function(global) {
 
     // Show the toolbar only when text is selected
     this.client_.onTextSelected = (coords) => {
-      if (this.toolbar) {
-        this.toolbar.show(coords);
-      }
+      this.toolbar.show(coords);
     }
 
     this.client_.onTextDeselected = () => {
-      if (this.toolbar) {
-        this.toolbar.hide();
-      }
+      this.toolbar.hide();
     }
 
 
